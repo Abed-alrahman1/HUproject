@@ -1,0 +1,581 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: url(images/background.png) no-repeat;
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0..1);
+    backdrop-filter: blur(50px);
+    z-index: -1;
+}
+
+.header::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, blueviolet, transparent);
+    transition: .5s;
+}
+
+.header:hover::after {
+    left: 100%;
+}
+
+.logo {
+    font-size: 2rem;
+    color: #fff;
+    cursor: default;
+}
+
+.logo span {
+    color: blueviolet
+}
+
+.hamburger-icon {
+    
+    position: absolute;
+    right: 5%;
+    font-size: 2.8rem;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+}
+
+.navigation a {
+    font-size: 1.15rem;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 2.5rem;
+}
+
+#check {
+    display: none;
+}
+
+.navigation a:hover {
+    color: blueviolet
+}
+
+.PortfolioBox {
+    margin: 10px auto;
+    padding: 100px 10%;
+    padding-bottom: 50px;
+    text-transform: capitalize;
+
+}
+
+
+h1 {
+    color: #fff;
+    font-size: 65px;
+    text-align: center;
+    padding-bottom: 10px;
+    text-shadow: 0 15px 10px blueviolet;
+}
+
+.container {
+    display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+}
+
+.box {
+    height: 300px;
+
+}
+
+.box p {
+    font-size: x-large;
+    min-width: 500px;
+    color: #fff;
+    border-radius: 5px;
+    padding: 15px 9%;
+    padding-bottom: 100%;
+}
+
+.coding-icons {
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon {
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    background-color: #fff;
+    margin: 20px;
+    text-align: center;
+    font-size: 50px;
+    line-height: 100px;
+    font-family: serif;
+    overflow: hidden;
+    box-shadow: 5px 10px 20px rgba(150, 150, 150, 150);
+    transition: all .5s ease-out;
+}
+
+.icon:hover {
+    width: 400px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    color: #fff;
+}
+
+.icon .fa-html5 {
+    color: red;
+}
+
+.html:hover {
+    background-color: red;
+
+}
+
+.icon .fa-css3 {
+    color: blue;
+}
+
+.css:hover {
+    background-color: blue;
+}
+
+.icon .fa-bootstrap {
+    color: blueviolet;
+}
+
+.BS:hover {
+    background-color: blueviolet;
+}
+
+.icon .fa-sass {
+    color: palevioletred;
+}
+
+.sass:hover {
+    background-color: palevioletred;
+}
+
+.icon .fa-square-js {
+    color: rgb(255, 170, 0);
+}
+
+.JS:hover {
+    background-color: rgb(255, 170, 0);
+}
+
+.NJ:hover {
+    background-color: black;
+}
+
+.icon .fa-database {
+    color: rgb(10, 101, 0);
+}
+
+.sql:hover {
+    background-color: rgb(10, 101, 0);
+}
+
+.icon .fa-react {
+    color: skyblue;
+}
+
+.react:hover {
+    background-color: skyblue;
+}
+
+.home {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 50px 9%;
+}
+
+.content {
+    font-size: x-large;
+    min-width: 500px;
+    color: #ffff;
+    padding: 15px 9%;
+    padding-bottom: 100px;
+}
+
+.content h1 {
+    color: #fff;
+    font-size: 65px;
+    text-align: center;
+    padding-bottom: 10px;
+    text-shadow: 0 15px 10px blueviolet;
+}
+
+.content span {
+    color: blueviolet;
+}
+
+.btn-cv {
+    position: absolute;
+    bottom: 100px;
+}
+
+.btn-cv a {
+    color: blueviolet;
+    text-decoration: none;
+    padding: 5px 30px;
+    border-radius: 10px;
+    border: 1px solid white;
+    font-weight: 200;
+}
+
+.btn-cv a:hover {
+    background-color: white;
+}
+
+.project-container {
+    padding: 15px 9%;
+    padding-bottom: 100px;
+}
+
+.project-container .projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 40px;
+}
+
+.project {
+
+    color: #fff;
+}
+
+.project img {
+    width: 420px;
+    height: 200px;
+}
+
+.contact {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    justify-content: center;
+
+}
+
+.contact-container {
+    max-width: 960px;
+    margin: auto;
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    backdrop-filter: blur(50px);
+    display: grid;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.form-container {
+    padding: 20px;
+}
+
+.form-container h3 {
+    font-size: x-large;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.contact-form {
+    display: grid;
+    row-gap: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    border: none;
+    outline: none;
+    background-color: rgba(0, 0, 0, 0..1);
+    backdrop-filter: blur(50px);
+    padding: 10px;
+    font-size: 0.9rem;
+    color: #000000;
+    border-radius: 0.4rem;
+}
+
+.contact-form textarea {
+    resize: none;
+    height: 200px;
+}
+
+.contact-form .send-button {
+    border: none;
+    outline: none;
+    background: blueviolet;
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.contact-form .send-button:hover {
+    background: hsla(284, 46%, 53%, 0.8);
+    transition: 0.3s all linear;
+}
+
+.map iframe {
+    width: 100%;
+    height: 100%;
+
+
+}
+
+
+
+@media only screen and (min-width : 320px) and (max-width: 991px) {
+
+    .header {
+        padding: 1.3rem 5%;
+    }
+
+    .hamburger-icon {
+        display: inline-flex;
+    }
+
+    #check:checked~.hamburger-icon #menu-icon {
+        display: none;
+    }
+
+    .hamburger-icon #close-icon {
+        display: none;
+    }
+
+
+    .navigation {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 0;
+        background-color: rgba(0, 0, 0, 0..1);
+        backdrop-filter: blur(50px);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0..1);
+        transition: .3s ease;
+        overflow: hidden;
+
+    }
+
+    #check:checked~.navigation {
+        height: 17.7rem;
+    }
+
+    .navigation a {
+        display: block;
+        font-size: 1.1rem;
+        margin: 1.5rem 0;
+        text-align: center;
+        transform: translateY(-50px);
+        opacity: 0;
+        transition: .3s ease;
+    }
+
+    #check:checked~.navigation a {
+        transform: translateY(0);
+        opacity: 1;
+        transition-delay: calc(.15 * var(--i));
+    }
+
+    .PortfolioBox {
+        margin-top: 20px;
+        margin: 10px auto;
+        padding: 350px 10%;
+        padding-bottom: 50px;
+        text-transform: capitalize;
+    }
+
+    .coding-icons {
+        height: 225vh;
+        flex-direction: column;
+    }
+
+    .home {
+        height: 50vh;
+
+    }
+
+    .btn-cv a {
+        display: none;
+    }
+
+    .content {
+        height: 150vh;
+    }
+
+    .project-container {
+        height: 70vh;
+    }
+
+
+
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        margin-top: 20rem !important;
+        margin: 0 auto;
+        width: 90%;
+
+    }
+
+    .contact {
+        height: 450vh;
+    }
+
+    .map iframe {
+        height: 400px;
+
+    }
+}
+
+
+/*@media (max-width: 600px) {
+    .hamburger-icon {
+            display: inline-flex;
+        }
+    
+        #check:checked~.hamburger-icon #menu-icon {
+            display: none;
+        }
+    
+        .hamburger-icon #close-icon {
+            display: none;
+        }
+    
+    
+        .navigation {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            height: 0;
+            background-color: rgba(0, 0, 0, 0..1);
+            backdrop-filter: blur(50px);
+            box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0..1);
+            transition: .3s ease;
+            overflow: hidden;
+    
+        }
+    
+        #check:checked~.navigation {
+            height: 17.7rem;
+        }
+    
+        .navigation a {
+            display: block;
+            font-size: 1.1rem;
+            margin: 1.5rem 0;
+            text-align: center;
+            transform: translateY(-50px);
+            opacity: 0;
+            transition: .3s ease;
+        }
+    
+        #check:checked~.navigation a {
+            transform: translateY(0);
+            opacity: 1;
+            transition-delay: calc(.15 * var(--i));
+        }
+    
+        .PortfolioBox {
+            margin-top: 20px;
+            margin: 10px auto;
+            padding: 340px 10%;
+            padding-bottom: 50px;
+            text-transform: capitalize;
+        }
+    
+        .coding-icons {
+            height: 250vh;
+            flex-direction: column;
+        }
+    
+        .home {
+            height: 20vh;
+        }
+    
+        .btn-cv a {
+            margin: 10px auto;
+        }
+    
+        .home {
+            height: 350vh;
+        }
+    
+        .contact-container {
+            grid-template-columns: 1fr;
+            gap: 1rem;
+            margin-top: 20rem !important;
+            margin: 0 auto;
+            width: 90%;
+    
+        }
+    
+        .map iframe {
+            height: 400px;
+    
+        }
+    
+}*/
+
+@media (max-width: 964px) {
+    .contact-container {
+        margin: 0 auto;
+        width: 90%;
+    }
+}
+
+@media (max-width: 700) {}
